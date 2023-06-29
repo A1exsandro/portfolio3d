@@ -2,7 +2,15 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  base: "/portfolio3d",
+export default defineConfig({ 
   plugins: [react()],
+  optimizeDeps: {
+    include: [
+      'react',
+      'react-dom'
+    ],
+  },
+  resolve: {
+    extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json'],
+  },
 })
