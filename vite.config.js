@@ -5,6 +5,7 @@ import { resolve } from 'path';
 // https://vitejs.dev/config/
 export default defineConfig({ 
   plugins: [reactPlugin()],
+  base: "/portfolio3d",
   rollupOptions: {
     input: 'src/main.jsx',
   },
