@@ -8,11 +8,6 @@ export default defineConfig({
   rollupOptions: {
     input: '/src/main.jsx',
   },
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, 'src'),
-    },
-  },
   build: {
     rollupOptions: {
       input: {
@@ -28,8 +23,5 @@ export default defineConfig({
   },
   resolve: {
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json'],
-  },
-  build: {
-    sourcemap: true,
   },
 })
