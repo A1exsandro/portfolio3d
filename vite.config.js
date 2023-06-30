@@ -6,23 +6,4 @@ import { resolve } from 'path';
 export default defineConfig({ 
   plugins: [reactPlugin()],
   base: "/portfolio3d",
-  rollupOptions: {
-    input: 'src/main.jsx',
-  },
-  build: {
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'src/main.jsx'),
-      },
-    },
-  },
-  optimizeDeps: {
-    include: [
-      'react',
-      'react-dom/client'
-    ],
-  },
-  resolve: {
-    extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json'],
-  },
 })
