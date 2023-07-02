@@ -1,27 +1,11 @@
-import { useState, useEffect } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 
 import { About, Contact, Experience, Feedbacks,
 Hero, Navbar, Tech, Works, StarsCanvas } from './components'
+import { useIsMobile } from './contexts/IsMobileContext'
 
 const App = () => { 
-  const [isMobile, setIsMobile] = useState(false)
-   
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 500px)')
-
-    setIsMobile(mediaQuery.matches)
-
-    const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches)
-    }
-
-    mediaQuery.addEventListener('change', handleMediaQueryChange)
-
-    return () => {
-      mediaQuery.removeEventListener('change', handleMediaQueryChange)
-    }
-  }, [])
+  const { isMobile } = useIsMobile()
 
   return (
     <BrowserRouter>
