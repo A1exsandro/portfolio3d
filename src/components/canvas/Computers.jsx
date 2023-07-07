@@ -5,7 +5,7 @@ import { useIsMobile } from '../../contexts/IsMobileContext'
 import CanvasLoader from '../Loader'
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF('./models/dual_computer/model.glb')
+  const computer = useGLTF('./desktop_pc/scene.gltf')
 
   return (
     <mesh>
@@ -21,9 +21,9 @@ const Computers = ({ isMobile }) => {
       />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 1 : 2}
-        position={isMobile ? [0, -1, 0] : [0, -1.5, 0]}
-        rotation={[0, -2, 0]}
+        scale={isMobile ? 0.5 : 0.8}
+        position={isMobile ? [0, -1, 0] : [0, -3, 0]}
+        rotation={[0, 0, 0]}
       />
     </mesh>
   )
