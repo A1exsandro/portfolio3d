@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  portfolio3d:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: portfolio3d
+    ports:
+      - "3001:80"
+    restart: always
